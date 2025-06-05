@@ -1,0 +1,179 @@
+/* 📌 Medya sorgusu: 768px altındaki ekranlar için duyarlılık */
+@media (max-width: 768px) {
+    .bookList-and-cart {
+        flex-direction: column;
+    }
+
+    .cart {
+        width: 100%;
+    }
+}
+
+/* 📌 Genel Stil Ayarları */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 📌 Ana Sayfa Stil Ayarları */
+body {
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 📌 Ana Konteyner */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-height: 100vh; /* Sayfanın tamamını kaplamasını önler */
+    overflow: auto; /* Fazla içeriği gizleyerek kaydırmayı sağlar */
+}
+
+/* 📌 Arama Kutusu */
+.searchBox {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.searchBox input {
+    width: 60%;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #06283d;
+    border-radius: 8px;
+}
+
+/* 📌 Kitap Listesi ve Sepet Alanı */
+.bookList-and-cart {
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+    align-items: flex-start;
+}
+
+/* 📌 Kitap Listesi */
+.books-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 600px; /* Minimum yükseklik artırılarak sıkışmayı önlüyoruz */
+    padding-top: 40px; /* Arama çubuğu ile çakışmayı önlüyor */
+}
+
+.books-list h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+/* 📌 Kitap Kartları */
+.book {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.book:hover {
+    transform: scale(1.05);
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.book h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.book p {
+    font-size: 16px;
+    color: #06283d;
+}
+
+.book button {
+    background: #06283d;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* 📌 Sepet Alanı */
+.cart {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 300px;
+    max-height: 1000px; /* Sepetin aşırı büyümesini engeller */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 120px;
+    position: sticky;
+    top: 20px; /* Kullanıcı aşağı kaydırdığında sepet belirli bir mesafeye kadar ekranın üstünde sabit kalır */
+}
+
+/* 📌 Sepetteki Kitap Listesi */
+.cart-items {
+    margin-top: 15px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+    border-top: 2px solid #ddd;
+}
+
+.cart-items ul {
+    padding: 10px;
+    list-style-type: none;
+}
+
+.cart-items .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 📌 Sepetteki Kitap Silme Butonu */
+.cart-items .cart-item button {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* 📌 Toplam Fiyat */
+#total-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #06283d;
+}

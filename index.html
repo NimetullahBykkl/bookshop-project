@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <!-- FontAwesome kütüphanesi (Çöp kutusu ikonları için) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    
+    <!-- CSS dosyanın bağlantısı -->
+    <link rel="stylesheet" href="style.css"/>
+    
+    <title>Kitap Satın Alma</title>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Kullanıcıya kitap araması yapma alanı -->
+        <div class="searchBox">
+            <input type="text" id="search-input" placeholder="Kitap Arama">
+        </div>
+
+        <div class="bookList-and-cart">
+            <!-- Kitap Listesi -->
+            <div class="books-list">
+                <h2 class="cart-title">Kitaplar</h2>
+                <div class="books">
+                    <!-- Kitaplar buraya JavaScript ile eklenecek -->
+                </div>
+            </div>
+
+            <!-- Sepet -->
+            <div class="cart">
+                <h2 class="cart-title">Sepet</h2>
+                <div class="cart-items">
+                    <form class="card-form">
+                        <ul></ul> <!-- Sepete eklenen kitaplar burada listelenecek -->
+                    </form>
+                </div>
+
+                <!-- Toplam fiyat bilgisi -->
+                <p>Toplam: <span id="total-price">0</span>₺</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript dosyanın bağlantısı -->
+    <script src="app.js"></script>
+</body>
+</html>
